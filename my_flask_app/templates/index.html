@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Transformation</title>
+<style>
+  .card, .card1, .card2 {
+    width: 400px;
+    height: 650px;
+    background-color: burlywood;
+    border-radius: 60px;
+    position: absolute;
+    transition: transform 1s, background-color 1s, width 1s, height 1s;
+  }
+
+  .card:hover, .card1:hover, .card2:hover {
+    background-color: #0080ff;
+    width: 450px;
+    height: 700px;
+    transform: scale(1.05);
+  }
+
+  .card {
+    top: 200px;
+    left: 50px;
+  }
+
+  .card1 {
+    right: 600px;
+    top: 200px;
+  }
+
+  .card2 {
+    left: 900px;
+    top: 200px;
+  }
+ .photo {
+    width: 40px;
+    height: auto;
+
+   padding: 40px;
+
+}
+.info {
+   padding: 40px;
+   height: 10%;
+}
+img {
+   position: relative;
+   left:17%;
+   border-radius: 20px;
+}
+</style>
+ </head>
+<body>
+ <nav>
+        <a href="{{ url_for('index') }}">Главная</a>
+        <a href="{{ url_for('blog') }}">Блог</a>
+        <a href="{{ url_for('contacts') }}">Контакты</a>
+    </nav>
+    <h1>Добро пожаловать!</h1>
+    <p>Текущие дата и время: {{ current_time }}</p>
+ <div class="card">
+   <div class="photo">
+        <img src="../static/kard1.png">
+    </div>
+
+    <div class="info">
+        <h1>Мэтт Мердок</h1>
+        <p> Mett_Merdok@gmail.com </p>
+        <p> 24 августа 1985г </p>
+       <p> Бостон </p>
+    </div>
+ </div>
+ <div class="card1">
+     <div class="photo">
+       <img src="../static/kard2.jpg">
+    </div>
+
+   <div class="info">
+       <h1>Эйб Сапиен</h1>
+       <p> A.Sapien@gmail.com </p>
+        <p> 25 февраля 1915г </p>
+       <p> Лондон </p>
+   </div>
+</div>
+<div class="card2">
+    <div class="photo">
+       <img src="../static/kard3.png">
+   </div>
+
+   <div class="info">
+       <h1>Дженнифер Лоуренс</h1>
+       <p> Mistix.Lourens@gmail.com </p>
+        <p> 12 ноября 1955г </p>
+       <p> Кентуки </p>
+   </div>
+
+</body>
+</html>
